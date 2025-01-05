@@ -14,7 +14,7 @@ typedef struct Employee {
 Employee emp;
 FILE *fp;
 
-// Function Declarations
+
 void addEmployee();
 void viewAllEmployees();
 void searchEmployee();
@@ -57,8 +57,8 @@ int main() {
         }
 
         printf("\nPress any key to continue...\n");
-        getchar(); // to consume the newline character
-        getchar(); // wait for user to press a key
+        getchar(); 
+        getchar(); 
     }
 
     return 0;
@@ -73,7 +73,7 @@ void addEmployee() {
 
     printf("Enter Employee ID: ");
     scanf("%d", &emp.id);
-    getchar(); // consume newline character
+    getchar(); 
 
     printf("Enter Employee Name: ");
     fgets(emp.name, sizeof(emp.name), stdin);
@@ -89,7 +89,7 @@ void addEmployee() {
 
     printf("Enter Salary: ");
     scanf("%f", &emp.salary);
-    getchar(); // consume newline character
+    getchar(); 
 
     printf("Enter Contact Number: ");
     fgets(emp.contact, sizeof(emp.contact), stdin);
@@ -127,7 +127,7 @@ void searchEmployee() {
     printf("Search Employee by ID, Name or Department\n");
     printf("Enter ID (0 if searching by Name/Department): ");
     scanf("%d", &id);
-    getchar(); // consume newline character
+    getchar(); 
 
     if (id == 0) {
         printf("Enter Name or Department to search: ");
@@ -174,7 +174,7 @@ void updateEmployee() {
     int id;
     printf("Enter Employee ID to update: ");
     scanf("%d", &id);
-    getchar(); // consume newline character
+    getchar(); 
 
     fp = fopen("EmployeeData.txt", "r");
     if (fp == NULL) {
@@ -212,7 +212,7 @@ void updateEmployee() {
 
             printf("Enter Salary: ");
             scanf("%f", &emp.salary);
-            getchar(); // consume newline character
+            getchar(); 
 
             printf("Enter Contact Number: ");
             fgets(emp.contact, sizeof(emp.contact), stdin);
@@ -241,7 +241,7 @@ void deleteEmployee() {
     int id;
     printf("Enter Employee ID to delete: ");
     scanf("%d", &id);
-    getchar(); // consume newline character
+    getchar(); 
 
     fp = fopen("EmployeeData.txt", "r");
     if (fp == NULL) {
@@ -286,7 +286,7 @@ void manageSalary() {
     int id;
     printf("Enter Employee ID to manage salary: ");
     scanf("%d", &id);
-    getchar(); // consume newline character
+    getchar(); 
 
     fp = fopen("EmployeeData.txt", "r");
     if (fp == NULL) {
